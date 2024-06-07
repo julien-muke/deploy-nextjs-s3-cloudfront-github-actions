@@ -8,7 +8,7 @@ In this demo, we will explore a solution that leverages Amazon S3 and CloudFront
 
 ## <a name="design">📐 Project Architecture</a>
 
-![Serverless Web Application on AWS](https://github.com/julien-muke/Serverless-Web-Application-on-AWS/assets/110755734/9c7fefe7-014e-4648-a105-fc67b201d882)
+![Blank diagram-15](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/050c9219-ec93-44a4-8b74-8a4aa1881314)
 
 
 ## <a name="steps">☑️ Steps</a>
