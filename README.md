@@ -13,10 +13,14 @@ In this demo, we will explore a solution that leverages Amazon S3 and CloudFront
 
 ## <a name="steps">☑️ Steps</a>
 
-* Create a DynamoDB table to store the items
-* Build a Lambda function to handle the CRUD operations on the DynamoDB table
-* Use S3 to store and host the web application's static files (HTML, CSS, and JavaScript)
-* Create a CloudFront distribution to serve the S3-hosted static files with low latency
+* Create a Create NextJS App
+* Push Source Code to GitHub
+* Create S3 Bucket
+* Setting permissions for website access
+* Create CloudFront Distribution
+* Integrate AWS with Github for Github Actions Workflow
+* Set up IAM roles to connect GitHub Actions to actions in AWS
+* Configuring OpenID Connect in Amazon Web Services
 
 
 ## ➡️ Step 1 - Create an Amazon S3 Bucket
