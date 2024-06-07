@@ -33,5 +33,14 @@ To create a new Next.js application, Run this command:
 
 Once you created the application, navigate to the project directory and open your project with a code editor (VS code). You can create more files within your application.
 
-For me, i've built my portfolio website with Next.js for handling the user interface, Three.js for rendering 3D elements, Framer motion for beautiful animations, and styled with TailwindCSS.
+For me, i've a Modern UI/UX website using React.js & Tailwind CSS called KivuBank.
+
+![Screenshot](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/cf92f34e-ee38-4119-a552-30e4af8870db)
+
+
+
+
+
+
+
 
