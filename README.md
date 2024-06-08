@@ -37,9 +37,27 @@ For me, i've a Modern UI/UX website using React.js & Tailwind CSS called KivuBan
 
 ![Screenshot](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/cf92f34e-ee38-4119-a552-30e4af8870db)
 
+Note: If you want a website example, i have a few React.js apps in my ![GitHub repo](https://github.com/julien-muke) that you can clone into your local machine and use for this AWS demo.
+
+Feel free to follow and give it a star 
 
 
+## ➡️ Step 2 - Push your Next.js 14 app to GitHub
 
+When you're done building your Next.js application, You have to push your code to GitHub.
+Create a GitHub repository and push your Next.js app's code to this repository by using the following command:
+
+
+```bash
+git init
+git add .
+git commit -m "Your commit message"
+git branch -M master
+git remote add origin <your_repository_url>
+git push -u -f origin master
+```
+
+## ➡️ Step 3 - Create S3 Bucket
 
 
 
