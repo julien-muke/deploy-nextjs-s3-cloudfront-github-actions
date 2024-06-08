@@ -62,8 +62,12 @@ git push -u -f origin master
 1. Sign in to the AWS Management Console and open the Amazon S3 console at https://console.aws.amazon.com/s3/.
 2. In the left navigation pane, choose Buckets.
 3. Choose Create bucket
+4. Under Bucket type, choose General purpose.
+5. For Bucket name, enter a name for your bucket. I will name it `nextjs-s3-cloudfront-jm`
 
+![Create-S3-bucket-S3-us-east-1(1)](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/b3a1de0d-e8fd-4715-833a-f86dc5d23269)
 
+6. 
 
 
 ```json
