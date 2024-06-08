@@ -39,7 +39,7 @@ For me, i've a Modern UI/UX website using React.js & Tailwind CSS called KivuBan
 
 Note: If you want a website example, i have a few React.js apps in my ![GitHub repo](https://github.com/julien-muke) that you can clone into your local machine and use for this AWS demo.
 
-Feel free to follow and give it a star 
+Feel free to follow and give it a star ⭐
 
 
 ## ➡️ Step 2 - Push your Next.js 14 app to GitHub
@@ -58,6 +58,32 @@ git push -u -f origin master
 ```
 
 ## ➡️ Step 3 - Create S3 Bucket
+
+1. Sign in to the AWS Management Console and open the Amazon S3 console at https://console.aws.amazon.com/s3/.
+2. In the left navigation pane, choose Buckets.
+3. Choose Create bucket
+
+
+
+
+```json
+    {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::Bucket-Name/*"
+            ]
+        }
+    ]
+}
+```
 
 
 
