@@ -128,9 +128,23 @@ npm run build
 ```
 
 4. This command will extract your code into "dist folder" then copy and paste in S3 Bucket
+5. Then click "Upload"
 
 ![4](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/eadae769-6ca4-4e5f-93de-67ecd2ce8e3b)
 
+6. To check our website, let's go back to S3 Bucket properties and scroll down to "static website hosting" and click on the link provided, you will see our app hosted.
+
+![Screenshot 2024-06-08 at 14 53 01](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/b76df35a-1055-47a6-81c3-0d63286b557c)
+
+![5](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/aede3fe5-528e-4c0e-9e26-94e28c6df337)
+
+
+## ➡️ Step 6 - Create CloudFront Distribution
+
+1. Navigate to cloudfront
+2. Click on "Create distribition"
+
+![Screenshot 2024-06-10 at 15 03 29](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/5b39b6be-703a-4503-a4f3-28e95b025bea)
 
 
 
