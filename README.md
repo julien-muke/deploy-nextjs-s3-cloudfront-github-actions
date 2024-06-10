@@ -35,11 +35,7 @@ Once you created the application, navigate to the project directory and open you
 
 For me, i've a Modern UI/UX website using React.js & Tailwind CSS called KivuBank.
 
-![Screenshot](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/cf92f34e-ee38-4119-a552-30e4af8870db)
-
-Note: If you want a website example, i have a few React.js apps in my ![GitHub repo](https://github.com/julien-muke) that you can clone into your local machine and use for this AWS demo.
-
-Feel free to follow and give it a star ⭐
+Note: If you want a website example, i have a few React.js apps in my ![GitHub repo](https://github.com/julien-muke) that you can clone into your local machine and use for this AWS demo (Feel free to follow and give it a star ⭐).
 
 
 ## ➡️ Step 2 - Push your Next.js 14 app to GitHub
