@@ -17,6 +17,7 @@ In this demo, we will explore a solution that leverages Amazon S3 and CloudFront
 * Push Source Code to GitHub
 * Create S3 Bucket
 * Setting permissions for website access
+* Upload the app to S3 Bucket
 * Create CloudFront Distribution
 * Integrate AWS with Github for Github Actions Workflow
 * Set up IAM roles to connect GitHub Actions to actions in AWS
@@ -83,7 +84,14 @@ Public access is granted to buckets and objects through access control lists (AC
 
 ![Edit-static-website-hosting-S3-bucket-nextjs-s3-cloudfront-jm-S3-us-east-1](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/2dd6d6aa-06a6-41aa-932e-bc9a7093196a)
 
+## ➡️ Step 4 - Setting permissions for website access
 
+1. Go to your S3 Bucket console, on the Tab section, choose "permissions"
+2. Scroll down to "Bucket policy" and click "Edit"
+3. Copy and paste the Bucket policy below
+4. Click "Save changes"
+
+Note: Make sure to change the Bucket ARN and paste it to the under your resources.
 
 
 ```json
@@ -104,6 +112,27 @@ Public access is granted to buckets and objects through access control lists (AC
     ]
 }
 ```
+
+
+![Edit-bucket-policy-S3-bucket-nextjs-s3-cloudfront-jm-S3-us-east-1](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/e0fcf416-57cd-44f5-8cc9-ac43e365ce9f)
+
+
+## ➡️ Step 5 - Upload the app to S3 Bucket
+
+1. Back to S3 Bucket console, click on the S3 Bucket we've created
+2. Click "Upload"
+3. Open your Nextjs App on VS Code, extract your code by running the following command"
+
+```bash
+npm run build
+```
+
+4. This command will extract your code into "dist folder" then copy and paste in S3 Bucket
+
+![4](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/eadae769-6ca4-4e5f-93de-67ecd2ce8e3b)
+
+
+
 
 
 
