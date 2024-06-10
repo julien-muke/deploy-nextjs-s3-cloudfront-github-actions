@@ -63,7 +63,27 @@ git push -u -f origin master
 
 ![Create-S3-bucket-S3-us-east-1(1)](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/b3a1de0d-e8fd-4715-833a-f86dc5d23269)
 
-6. 
+6. Clear Block all public access, leave the rest as default and choose Save changes.
+
+Public access is granted to buckets and objects through access control lists (ACLs), bucket policies, access point policies, or all. In order to ensure that public access to this bucket and its objects is blocked, turn on Block all public access.
+
+![Create-S3-bucket-S3-us-east-1(1) copy](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/60bcf88c-d314-4191-948f-be40ed5db8fd)
+
+7. Next, let's navigate to Tab, choose "properties", scroll down to "static website hosting", click "Edit"
+
+![Screenshot 2024-06-08 at 14 51 20](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/da5a51bb-b653-4b3b-9efc-96661e84114c)
+
+
+8. To edit static website hosting:
+    <br>* "Enable" Static website hosting
+    <br>* Choose "Host a static website" as hosting type
+    <br>* Specify the home or default page of the website as `index.html`
+    <br>* Error document as `404.html`
+
+
+![Edit-static-website-hosting-S3-bucket-nextjs-s3-cloudfront-jm-S3-us-east-1](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/2dd6d6aa-06a6-41aa-932e-bc9a7093196a)
+
+
 
 
 ```json
