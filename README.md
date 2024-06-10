@@ -81,8 +81,8 @@ Public access is granted to buckets and objects through access control lists (AC
     <br>* Specify the home or default page of the website as `index.html`
     <br>* Error document as `404.html`
 
+![Edit-static-website-hosting-S3-bucket-nextjs-s3-cloudfront-jm-S3-us-east-1](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/a87058a0-9d4a-4377-83b2-791b188df6cb)
 
-![Edit-static-website-hosting-S3-bucket-nextjs-s3-cloudfront-jm-S3-us-east-1](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/2dd6d6aa-06a6-41aa-932e-bc9a7093196a)
 
 ## ➡️ Step 4 - Setting permissions for website access
 
@@ -114,7 +114,7 @@ Note: Make sure to change the Bucket ARN and paste it to the under your resource
 ```
 
 
-![Edit-bucket-policy-S3-bucket-nextjs-s3-cloudfront-jm-S3-us-east-1](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/e0fcf416-57cd-44f5-8cc9-ac43e365ce9f)
+![Edit-bucket-policy-S3-bucket-nextjs-s3-cloudfront-jm-S3-us-east-1](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/f87e5baf-836c-4bb2-9a22-e7b5f90bfb66)
 
 
 ## ➡️ Step 5 - Upload the app to S3 Bucket
