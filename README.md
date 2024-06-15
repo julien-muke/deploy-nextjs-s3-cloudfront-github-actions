@@ -171,3 +171,8 @@ To create a distribution (console):
 To check if the cloudfront distribution has been successfully deployed, copy and paste the Distribution domain name on a new tab
 
 ![Screenshot 2024-06-13 at 12 10 39](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/724c3fb9-234b-46ac-b03f-6b8b5debadfa)
+
+![Screenshot 2024-06-13 at 12 12 29](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/2a60956e-a243-44fa-8aba-86ed27f70f95)
+
+
+## ➡️ Step 7 - Integrate AWS with Github for Github Actions Workflow
