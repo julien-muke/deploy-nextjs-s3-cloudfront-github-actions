@@ -150,15 +150,24 @@ To create a distribution (console):
 
 3. Under Origin domain, choose our S3 Bucket
 4. To use this distribution as a website, choose S3 website endpoint
-
-![6](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/7bb10e61-cb3b-4f53-9714-24283eaf7775)
-
 5. Under Protocol, choose HTTP only
 6. Enter a name for this origin, which is our S3 Bucket
+
+![CloudFront-Global](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/9ef62f3e-e69c-4415-b837-11416df292dd)
+
 7. For Default cache behavior, under Viewer protocol policy choose Redirected HTTP to HTTPS
+
+![CloudFront-Global copy](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/04cbb27a-38d9-4123-a77f-67c68c355d52)
+
+
 8. For Web Application Firewall (WAF), choose Do not enable security protection
 9. Under Settings, for default root object enter `index.html`
+10. Leave everything as default then click "Create distrition"
 
 
+![CloudFront-Global copy 2](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/a965c1f6-7150-4604-8d33-cd0f5773f409)
 
 
+To check if the cloudfront distribution has been successfully deployed, copy and paste the Distribution domain name on a new tab
+
+![Screenshot 2024-06-13 at 12 10 39](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/724c3fb9-234b-46ac-b03f-6b8b5debadfa)
