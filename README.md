@@ -141,12 +141,23 @@ npm run build
 
 ## ➡️ Step 6 - Create CloudFront Distribution
 
-1. Navigate to cloudfront
-2. Click on "Create distribition"
+To create a distribution (console):
+
+1. Sign in to the AWS Management Console and open the CloudFront console at https://console.aws.amazon.com/cloudfront/v4/home.
+2. In the navigation pane, choose Distributions, then choose Create distribution.
 
 ![Screenshot 2024-06-10 at 15 03 29](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/5b39b6be-703a-4503-a4f3-28e95b025bea)
 
+3. Under Origin domain, choose our S3 Bucket
+4. To use this distribution as a website, choose S3 website endpoint
 
+![6](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/7bb10e61-cb3b-4f53-9714-24283eaf7775)
+
+5. Under Protocol, choose HTTP only
+6. Enter a name for this origin, which is our S3 Bucket
+7. For Default cache behavior, under Viewer protocol policy choose Redirected HTTP to HTTPS
+8. For Web Application Firewall (WAF), choose Do not enable security protection
+9. Under Settings, for default root object enter `index.html`
 
 
 
