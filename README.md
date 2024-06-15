@@ -136,7 +136,7 @@ npm run build
 
 ![Screenshot 2024-06-08 at 14 53 01](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/b76df35a-1055-47a6-81c3-0d63286b557c)
 
-![5](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/aede3fe5-528e-4c0e-9e26-94e28c6df337)
+![4](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/a90f6c9c-d627-4787-bb21-86bafaf980f7)
 
 
 ## ➡️ Step 6 - Create CloudFront Distribution
