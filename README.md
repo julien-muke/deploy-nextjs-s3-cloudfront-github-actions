@@ -29,7 +29,7 @@ In this demo, we will explore a solution that leverages Amazon S3 and CloudFront
 To create a new Next.js application, Run this command:
 
 ```bash
-    npx create-next-app@latest YOUR-PROJECT-NAME
+npx create-next-app@latest YOUR-PROJECT-NAME
 ```
 
 Once you created the application, navigate to the project directory and open your project with a code editor (VS code). You can create more files within your application.
