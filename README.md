@@ -221,7 +221,7 @@ To create your first workflow:
         - name: Configure AWS credentials from AWS account
           uses: aws-actions/configure-aws-credentials@v3
           with:
-            role-to-assume: arn:aws:iam::339713141289:role/github-to-aws-oicd YOUR-ARN-ROLE
+            role-to-assume: arn:aws:YOUR-ARN-ROLE-NAME/github-to-aws-oicd
             aws-region: ${{ env.AWS_REGION }}
   
         - name: Install Dependencies
@@ -244,6 +244,8 @@ To create your first workflow:
               --distribution-id ${{ env.CLOUDFRONT_DISTRIBUTION_ID }} \
               --paths "/*"
 ```
+
+NOTE: Make sure yu update `YOUR-S3-BUCKET-NAME` `YOUR-CLOUDFRONT-DISTRIBUTION-ID` `arn:aws:YOUR-ARN-ROLE-NAME/github-to-aws-oicd`
 
 3. Click Commit changes, committing the workflow file to a branch in your repository triggers the push event and runs your workflow.
 Before we test the workflow, let's create an IAM Policy to attach to the S3 Bucket.
