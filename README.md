@@ -290,7 +290,19 @@ To create a policy:
     ]
 }
 ```
+NOTE: Make sure the bucket ARN name with yours
 
+![Create-policy-IAM-Global(1)](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/525374c6-45c5-4db7-834c-535bce348a4a)
+
+
+6. Click Next, under create and review, enter the policy name `s3-web-access-policy` and click "Create policy"
+
+As you can see below the Permissions defined (cloudfront and S3) are already been attached in this policy.
+
+![Create-policy-IAM-Global(2)](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/aa3cdeab-5ea7-4093-9d92-2ee4201e01b3)
+
+
+7. 
 
 
 
