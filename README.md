@@ -378,9 +378,6 @@ To viewing your workflow results:
 
 ![github_actions](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/aa14428f-bf3b-4022-bc7c-eb276923ea3d)
 
-
-The example workflow we just added is triggered each time code is pushed to the branch, and shows you how GitHub Actions can work with the contents of your repository.
-
 ## Let's test the cloudfront distribution
 
 1. Copy the Distribution domain name
@@ -391,7 +388,9 @@ The example workflow we just added is triggered each time code is pushed to the 
 
 ![cloudfront](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/6a612007-25f7-4bb4-912c-4cba9a79d402)
 
-To test the CI/CD Pipeline with GitHub Workflow, when you edit something in the code files and push the changes to GitHub, it will trigger each time the code is pushed to the branch and automatically updates the cloudfront distribution.
+To test the CI/CD Pipeline with GitHub Workflow, when you edit something in the code files and push the changes to GitHub, it will trigger each time the code is pushed to the GitHub branch, then go through S3 bucket and automatically updates cloudfront distribution.
+
+
 
 
 
