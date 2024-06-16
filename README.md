@@ -167,7 +167,6 @@ To create a distribution (console):
 GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. You can create workflows that run tests whenever you push a change to your repository, or that deploy merged pull requests to production.
 
 Prerequisites:
-
   <br>* You have a repository on GitHub.com where you can add files.
   <br>* You have access to GitHub Actions.
 
@@ -235,6 +234,7 @@ To create your first workflow:
 NOTE: Make sure yu update `YOUR-S3-BUCKET-NAME` `YOUR-CLOUDFRONT-DISTRIBUTION-ID` `arn:aws:YOUR-ARN-ROLE-NAME/github-to-aws-oicd`
 
 3. Click Commit changes, committing the workflow file to a branch in your repository triggers the push event and runs your workflow.
+
 Before we test the workflow, let's create an IAM Policy to attach to the S3 Bucket.
 
 
@@ -279,7 +279,7 @@ To create a policy:
     ]
 }
 ```
-NOTE: Make sure the bucket ARN name with yours
+NOTE: Make sure you update your ARN bucket name
 
 ![Create-policy-IAM-Global(1)](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/525374c6-45c5-4db7-834c-535bce348a4a)
 
@@ -369,7 +369,7 @@ To viewing your workflow results:
 
 ## Let's test the cloudfront distribution
 
-1. Copy the Distribution domain name
+1. Navigate to cloudfront console, choose your distribution, copy the Distribution domain name
 
 ![Screenshot 2024-06-13 at 12 10 39](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/eab77fb2-428d-4a23-a07b-91b71afda546)
 
@@ -377,7 +377,7 @@ To viewing your workflow results:
 
 ![cloudfront](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/6a612007-25f7-4bb4-912c-4cba9a79d402)
 
-To test the CI/CD Pipeline with GitHub Workflow, when you edit something in the code files and push the changes to GitHub, it will trigger each time the code is pushed to the GitHub branch, then go through S3 bucket and automatically updates cloudfront distribution.
+To test the CI/CD Pipeline with GitHub Workflow, when you edit something in the code files and push the changes to GitHub, it will trigger each time the code is pushed to the branch, then go through S3 bucket and automatically updates cloudfront distribution.
 
 
 
