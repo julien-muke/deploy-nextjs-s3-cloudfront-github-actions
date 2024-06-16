@@ -360,5 +360,27 @@ NOTE: Make sure you update your ARN Role Name and your GitHub repository.
 ![Screenshot 2024-06-16 at 15 52 31](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/9b26302e-4d0c-4b94-965f-fde09914c9ab)
 
 
+## ➡️ Step 10 - Run and test the GitHub Actions Workflow
+
+To viewing your workflow results:
+
+1. On GitHub.com, navigate to the main page of the repository.
+2. Under your repository name, click Actions.
+
+![2](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/8cff4a4b-7271-4671-b40b-10fdf3093727)
+
+3. In the left sidebar, click the workflow you want to display, in my case is `Build and Deploy NextJS App to S3 and CloudFront`
+
+![Screenshot 2024-06-16 at 17 25 54](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/5f0a727a-579d-4ecf-b215-13573d56e9db)
+
+
+4. The log shows you how each of the steps was processed successfully. Expand any of the steps to view its details.
+
+![github_actions](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/aa14428f-bf3b-4022-bc7c-eb276923ea3d)
+
+
+The example workflow you just added is triggered each time code is pushed to the branch, and shows you how GitHub Actions can work with the contents of your repository.
+
+
 
 
