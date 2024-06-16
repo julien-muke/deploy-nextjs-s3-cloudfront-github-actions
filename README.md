@@ -246,6 +246,7 @@ To create your first workflow:
 ```
 
 3. Click Commit changes, committing the workflow file to a branch in your repository triggers the push event and runs your workflow.
+Before we test the workflow, let's create an IAM Policy to attach to the S3 Bucket.
 
 
 ## ➡️ Step 8 - Create an  IAM Policy to attach to S3 Bucket
@@ -255,5 +256,41 @@ To create a policy:
 1. Sign in to the AWS Management Console and open the IAM console at https://console.aws.amazon.com/iam/.
 2. In the navigation pane on the left, choose Policies. 
 3. Choose Create policy.
+
+![Screenshot 2024-06-16 at 15 22 16](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/669c0485-dd83-4804-81af-38bcf417d6af)
+
+4. Add permissions by selecting services, actions, resources, and conditions. Build permission statements using the JSON editor.
+
+![Screenshot 2024-06-16 at 15 23 13](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/3dd1cc67-b6a2-4503-a79e-7c8a61194a9d)
+
+5. Copy and paste the following policies into your JSON editor:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "ListObjectsInBucket",
+            "Effect": "Allow",
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::Bucket-Name"
+        },
+        {
+            "Sid": "AllObejctActions",
+            "Effect": "Allow",
+            "Action": "s3:*Object",
+            "Resource": "arn:aws:s3:::Bucket-Name/*"
+        },
+        {
+            "Sid": "InvalidateCF",
+            "Effect": "Allow",
+            "Action": "cloudfront:CreateInvalidation",
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+
 
 
