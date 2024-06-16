@@ -302,7 +302,63 @@ As you can see below the Permissions defined (cloudfront and S3) are already bee
 ![Create-policy-IAM-Global(2)](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/aa3cdeab-5ea7-4093-9d92-2ee4201e01b3)
 
 
-7. 
+## ➡️ Step 9 - Configuring OpenID Connect in Amazon Web 
+
+OpenID Connect (OIDC) allows your GitHub Actions workflows to access resources in Amazon Web Services (AWS), without needing to store the AWS credentials as long-lived GitHub secrets.
+
+To add the GitHub OIDC provider to IAM, we will Configuring the role and trust policy.
+
+1. Back to IAM console, navigate to "role" click "create role"
+
+![Screenshot 2024-06-16 at 15 28 51](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/345aaa7b-172e-422c-be19-25324ebfd41c)
+
+2. Under Trusted entity type, choose "AWS service"
+3. For Use case, choose "S3" click "Next"
+
+![Create-role-IAM-Global(12)](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/1de70816-bccb-48ab-a445-664bd6478714)
+
+
+4. Choose a policy to attach to your new role Permissions policy, we are going to choose `s3-web-access-policy` click "Next"
+
+![Screenshot 2024-06-16 at 15 33 52](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/d2a851f3-09a9-4931-9c2d-cbd89a7561dc)
+
+5. Enter role name `github-to-aws-oidc`
+6. Click "Create role"
+
+![Create-role-IAM-Global(13)](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/2af48a50-6911-4a4c-af38-5b9b16be75eb)
+
+6. We are going to update our policy trusted entities, under Trust relationships Tab, choose "Edit trust policy"
+7. Copy and paste the following policy entities:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Federated": "arn:aws:YOUR-ROLE-NAME/token.actions.githubusercontent.com"
+            },
+            "Action": "sts:AssumeRoleWithWebIdentity",
+            "Condition": {
+                "StringLike": {
+                    "token.actions.githubusercontent.com:sub": "repo:YOUR-REPO-ACCOUNT-NAME/YOUR-SPECIFIC-REPO-NAME:*"
+                },
+                "ForAllValues:StringEquals": {
+                    "token.actions.githubusercontent.com:iss": "https://token.actions.githubusercontent.com",
+                    "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
+                }
+               
+            }
+        }
+    ]
+}
+```
+
+NOTE: Make sure you update your ARN Role Name and your GitHub repository.
+
+![Screenshot 2024-06-16 at 15 52 31](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/9b26302e-4d0c-4b94-965f-fde09914c9ab)
+
 
 
 
