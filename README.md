@@ -380,7 +380,9 @@ To viewing your workflow results:
 To test the CI/CD Pipeline with GitHub Workflow, when you edit something in the code files and push the changes to GitHub, it will trigger each time the code is pushed to the branch, then go through S3 bucket and automatically updates cloudfront distribution.
 
 
+## 💰 Cost
 
+All services used are eligible for the AWS Free Tier. However, charges will incur at some point so it's recommended that you shut down resources after completing this tutorial.
 
 
 
