@@ -132,12 +132,6 @@ npm run build
 
 ![4](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/eadae769-6ca4-4e5f-93de-67ecd2ce8e3b)
 
-6. To check our website, let's go back to S3 Bucket properties and scroll down to "static website hosting" and click on the link provided, you will see our app hosted.
-
-![Screenshot 2024-06-08 at 14 53 01](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/b76df35a-1055-47a6-81c3-0d63286b557c)
-
-![4](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/a90f6c9c-d627-4787-bb21-86bafaf980f7)
-
 
 ## ➡️ Step 6 - Create CloudFront Distribution
 
@@ -166,13 +160,6 @@ To create a distribution (console):
 
 
 ![CloudFront-Global copy 2](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/a965c1f6-7150-4604-8d33-cd0f5773f409)
-
-
-To check if the cloudfront distribution has been successfully deployed, copy and paste the Distribution domain name on a new tab
-
-![Screenshot 2024-06-13 at 12 10 39](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/724c3fb9-234b-46ac-b03f-6b8b5debadfa)
-
-![Screenshot 2024-06-13 at 12 12 29](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/2a60956e-a243-44fa-8aba-86ed27f70f95)
 
 
 ## ➡️ Step 7 - Integrate AWS with Github for Github Actions Workflow
