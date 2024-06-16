@@ -176,3 +176,84 @@ To check if the cloudfront distribution has been successfully deployed, copy and
 
 
 ## ➡️ Step 7 - Integrate AWS with Github for Github Actions Workflow
+
+GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. You can create workflows that run tests whenever you push a change to your repository, or that deploy merged pull requests to production.
+
+Prerequisites:
+
+  <br>* You have a repository on GitHub.com where you can add files.
+  <br>* You have access to GitHub Actions.
+
+To create your first workflow:
+
+1. In your repository on GitHub.com, create a workflow file called `github-actions-demo.yml` in the `.github/workflows` directory. 
+
+![Screenshot 2024-06-16 at 10 54 07](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/379414d8-5cfe-4faf-a5ab-6957720eaecb)
+
+
+2. Copy the following YAML contents into the `github-actions-demo.yml` file:
+
+```yml
+---
+  name: Build and Deploy NextJS App to S3 and CloudFront
+  on:
+    push:
+      branches: [main]
+  # These permissions are needed to interact with GitHub's OIDC Token endpoint.
+  permissions:
+    id-token: write
+    contents: read
+  jobs:
+    build-and-deploy:
+      name: Build and Deploy
+      runs-on: ubuntu-latest
+  
+      env:
+        NEXTJS_DIST: dist
+        AWS_REGION: us-east-1
+        S3_BUCKET: YOUR-S3-BUCKET-NAME
+        CLOUDFRONT_DISTRIBUTION_ID: YOUR-CLOUDFRONT-DISTRIBUTION-ID
+  
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v3
+  
+        - name: Configure AWS credentials from AWS account
+          uses: aws-actions/configure-aws-credentials@v3
+          with:
+            role-to-assume: arn:aws:iam::339713141289:role/github-to-aws-oicd YOUR-ARN-ROLE
+            aws-region: ${{ env.AWS_REGION }}
+  
+        - name: Install Dependencies
+          run: |
+            node --version
+            npm ci --production
+            npm install @types/react 
+            npm install @types/node
+  
+        - name: Build Static Website
+          run: npm run build
+  
+        - name: Copy files to the production website with the AWS CLI
+          run: |
+            aws s3 sync --delete ${{ env.NEXTJS_DIST }} s3://${{ env.S3_BUCKET }}
+  
+        - name: Copy files to the production website with the AWS CLI
+          run: |
+            aws cloudfront create-invalidation \
+              --distribution-id ${{ env.CLOUDFRONT_DISTRIBUTION_ID }} \
+              --paths "/*"
+```
+
+3. Click Commit changes, committing the workflow file to a branch in your repository triggers the push event and runs your workflow.
+
+
+## ➡️ Step 8 - Create an  IAM Policy to attach to S3 Bucket
+
+To create a policy:
+
+1. Sign in to the AWS Management Console and open the IAM console at https://console.aws.amazon.com/iam/.
+2. In the navigation pane on the left, choose Policies. 
+3. Choose Create policy.
+
+
