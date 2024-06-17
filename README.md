@@ -19,7 +19,7 @@ In this demo, we will explore a solution that leverages Amazon S3 and CloudFront
 * Setting permissions for website access
 * Upload the app to S3 Bucket
 * Create CloudFront Distribution
-* Integrate AWS with Github for Github Actions Workflow
+* Setup a CI/CD Pipeline with GitHub Actions and AWS
 * Set up IAM roles to connect GitHub Actions to actions in AWS
 * Configuring OpenID Connect in Amazon Web Services
 
@@ -161,7 +161,7 @@ To create a distribution (console):
 ![CloudFront-Global copy 2](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/a965c1f6-7150-4604-8d33-cd0f5773f409)
 
 
-## ➡️ Step 7 - Integrate AWS with Github for Github Actions Workflow
+## ➡️ Step 7 - Setup a CI/CD Pipeline with GitHub Actions and AWS
 
 GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. You can create workflows that run tests whenever you push a change to your repository, or that deploy merged pull requests to production.
 
