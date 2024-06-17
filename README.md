@@ -34,7 +34,7 @@ npx create-next-app@latest YOUR-PROJECT-NAME
 
 Once you created the application, navigate to the project directory and open your project with a code editor (VS code). You can create more files within your application.
 
-For me, i've a Modern UI/UX website using React.js & Tailwind CSS called KivuBank.
+For me, i have a Modern UI/UX website using React.js & Tailwind CSS called KivuBank.
 I have the source code in my ![GitHub repo](https://github.com/julien-muke/kivu_bank), feel free to clone it into your local machine and use for this AWS demo (Feel free to follow and give it a star ⭐).
 
 
@@ -230,7 +230,7 @@ To create your first workflow:
               --paths "/*"
 ```
 
-NOTE: Make sure yu update `YOUR-S3-BUCKET-NAME` `YOUR-CLOUDFRONT-DISTRIBUTION-ID` `arn:aws:YOUR-ARN-ROLE-NAME/github-to-aws-oicd`
+NOTE: Make sure you update `YOUR-S3-BUCKET-NAME` `YOUR-CLOUDFRONT-DISTRIBUTION-ID` `arn:aws:YOUR-ARN-ROLE-NAME/github-to-aws-oicd`
 
 3. Click Commit changes, committing the workflow file to a branch in your repository triggers the push event and runs your workflow.
 
