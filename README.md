@@ -35,14 +35,13 @@ npx create-next-app@latest YOUR-PROJECT-NAME
 Once you created the application, navigate to the project directory and open your project with a code editor (VS code). You can create more files within your application.
 
 For me, i've a Modern UI/UX website using React.js & Tailwind CSS called KivuBank.
+I have the source code in my ![GitHub repo](https://github.com/julien-muke/kivu_bank), feel free to clone it into your local machine and use for this AWS demo (Feel free to follow and give it a star ⭐).
 
-Note: If you want a website example, i have a few React.js apps in my ![GitHub repo](https://github.com/julien-muke) that you can clone into your local machine and use for this AWS demo (Feel free to follow and give it a star ⭐).
 
+## ➡️ Step 2 - Push your app to GitHub
 
-## ➡️ Step 2 - Push your Next.js 14 app to GitHub
-
-When you're done building your Next.js application, You have to push your code to GitHub.
-Create a GitHub repository and push your Next.js app's code to this repository by using the following command:
+When you're done building your application, You have to push your code to GitHub.
+Create a GitHub repository and push your code by using the following command:
 
 
 ```bash
@@ -348,6 +347,7 @@ NOTE: Make sure you update your ARN Role Name and your GitHub repository.
 
 ![Screenshot 2024-06-16 at 15 52 31](https://github.com/julien-muke/deploy-nextjs-s3-cloudfront-github-actions/assets/110755734/9b26302e-4d0c-4b94-965f-fde09914c9ab)
 
+To learn more about OpenID Connect (OIDC), see ![Configuring OpenID Connect in Amazon Web Services](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services)
 
 ## ➡️ Step 10 - Run and test the GitHub Actions Workflow
 
